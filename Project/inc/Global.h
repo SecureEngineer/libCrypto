@@ -6,7 +6,7 @@
 * @version 1.0
 * <pre><b>CopyRight: (c) 2015, Li YaoLong</b></pre> 
 * <pre><b>Email: </b>SecMaster@Outlook.com</pre> 
-* <pre><b>Company: </b>http://www.sectalk.com.cn</pre> 
+* <pre><b>Company: </b>http://www.sinosecsoft.com</pre> 
 * <pre><b>All rights reserved.</b></pre> 
 */
 #ifndef GLOBAL_H

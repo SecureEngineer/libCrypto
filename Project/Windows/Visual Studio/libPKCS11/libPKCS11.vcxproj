@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{EC0A5F69-E281-48B4-BA15-51B8E94E479F}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>CryptoLib</RootNamespace>
+    <ProjectName>libPKCS11</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;CRYPTOLIB_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;CRYPTOLIB_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\inc\AESKeyObject.h" />
+    <ClInclude Include="..\..\..\inc\AsymmEngine.h" />
+    <ClInclude Include="..\..\..\inc\CertificateObject.h" />
+    <ClInclude Include="..\..\..\inc\Crypto.h" />
+    <ClInclude Include="..\..\..\inc\Cryptoki.h" />
+    <ClInclude Include="..\..\..\inc\DataObject.h" />
+    <ClInclude Include="..\..\..\inc\ECPriKeyObject.h" />
+    <ClInclude Include="..\..\..\inc\ECPubKeyObject.h" />
+    <ClInclude Include="..\..\..\inc\Global.h" />
+    <ClInclude Include="..\..\..\inc\HashEngine.h" />
+    <ClInclude Include="..\..\..\inc\HWFeatureObject.h" />
+    <ClInclude Include="..\..\..\inc\KeyObject.h" />
+    <ClInclude Include="..\..\..\inc\Mechanism.h" />
+    <ClInclude Include="..\..\..\inc\Mutex.h" />
+    <ClInclude Include="..\..\..\inc\Object.h" />
+    <ClInclude Include="..\..\..\inc\PKCS11.h" />
+    <ClInclude Include="..\..\..\inc\PKCS11_Base.h" />
+    <ClInclude Include="..\..\..\inc\PKCS11_DataType.h" />
+    <ClInclude Include="..\..\..\inc\PKCS11_Function.h" />
+    <ClInclude Include="..\..\..\inc\PrivateKeyObject.h" />
+    <ClInclude Include="..\..\..\inc\PublicKeyObject.h" />
+    <ClInclude Include="..\..\..\inc\RngEngine.h" />
+    <ClInclude Include="..\..\..\inc\RSAPriKeyObject.h" />
+    <ClInclude Include="..\..\..\inc\RSAPubKeyObject.h" />
+    <ClInclude Include="..\..\..\inc\SecretKeyObject.h" />
+    <ClInclude Include="..\..\..\inc\Session.h" />
+    <ClInclude Include="..\..\..\inc\Slot.h" />
+    <ClInclude Include="..\..\..\inc\StorageObject.h" />
+    <ClInclude Include="..\..\..\inc\SymmEngine.h" />
+    <ClInclude Include="..\..\..\inc\X509AttrCertObject.h" />
+    <ClInclude Include="..\..\..\inc\X509PubKeyCertObject.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\AESKeyObject.cpp" />
+    <ClCompile Include="..\..\..\src\Crypto.cpp" />
+    <ClCompile Include="..\..\..\src\DataObject.cpp" />
+    <ClCompile Include="..\..\..\src\ECPriKeyObject.cpp" />
+    <ClCompile Include="..\..\..\src\ECPubKeyObject.cpp" />
+    <ClCompile Include="..\..\..\src\Mechanism.cpp" />
+    <ClCompile Include="..\..\..\src\PKCS11_Function.cpp" />
+    <ClCompile Include="..\..\..\src\Global.cpp" />
+    <ClCompile Include="..\..\..\src\HWFeatureObject.cpp" />
+    <ClCompile Include="..\..\..\src\Mutex.cpp" />
+    <ClCompile Include="..\..\..\src\Object.cpp" />
+    <ClCompile Include="..\..\..\src\PublicKeyObject.cpp" />
+    <ClCompile Include="..\..\..\src\RSAPriKeyObject.cpp" />
+    <ClCompile Include="..\..\..\src\RSAPubKeyObject.cpp" />
+    <ClCompile Include="..\..\..\src\Slot.cpp" />
+    <ClCompile Include="..\..\..\src\StorageObject.cpp" />
+    <ClCompile Include="..\..\..\src\X509AttrCertObject.cpp" />
+    <ClCompile Include="..\..\..\src\X509PubKeyCertObject.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

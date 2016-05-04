@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libCrypto", "libCrypto\libCrypto.vcxproj", "{EC0A5F69-E281-48B4-BA15-51B8E94E479F}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libCrypto", "libPKCS11\libPKCS11.vcxproj", "{EC0A5F69-E281-48B4-BA15-51B8E94E479F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
